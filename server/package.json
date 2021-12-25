@@ -1,0 +1,15 @@
+{
+  "name": "websocket-tic-tac-toe-server",
+  "version": "1.0.0",
+  "description": "A simple API for a websocket tic tac toe application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ashaun Thomas",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "express": "^4.17.2"
+  }
+}
