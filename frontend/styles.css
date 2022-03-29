@@ -1,3 +1,9 @@
+@font-face {
+    font-family: interMedium;
+    src: url(./Inter-Medium.ttf);
+}
+  
+
 #banner {
     display: flex;
     justify-content: space-evenly;
@@ -11,4 +17,5 @@
 
 h1 {
     margin-bottom: -0.5em;
+    font-family: interMedium;
 }

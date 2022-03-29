@@ -17,6 +17,10 @@ async fn styles() -> impl Responder {
     NamedFile::open_async("../frontend/styles.css").await.unwrap()
 }
 
+async fn resources() -> impl Responder {
+    NamedFile::open_async("../frontend/resources/inter/static/Inter-Medium.ttf").await.unwrap()
+}
+
 /// WebSocket handshake and start `MyWebSocket` actor.
 async fn echo_ws(req: HttpRequest, stream: web::Payload) -> Result<HttpResponse, Error> {
     ws::start(MyWebSocket::new(), &req, stream)
@@ -32,8 +36,10 @@ async fn main() -> std::io::Result<()> {
         App::new()
             // WebSocket UI HTML file
             .service(web::resource("/").to(index))
-            // CSS file
+            // CSS 
             .service(web::resource("/styles.css").to(styles))
+            // resources
+            .service(web::resource("/Inter-Medium.ttf").to(resources))
             // websocket route
             .service(web::resource("/ws").route(web::get().to(echo_ws)))
             // enable logger
