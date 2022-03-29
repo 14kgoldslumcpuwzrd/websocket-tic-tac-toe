@@ -1,0 +1,14 @@
+#banner {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 2em;
+    font-size: 30px;
+}
+
+#title {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: -0.5em;
+}
