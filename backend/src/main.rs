@@ -17,7 +17,11 @@ async fn styles() -> impl Responder {
     NamedFile::open_async("../frontend/styles.css").await.unwrap()
 }
 
-async fn resources() -> impl Responder {
+async fn js() -> impl Responder {
+    NamedFile::open_async("../frontend/main.js").await.unwrap()
+}
+
+async fn intermedium() -> impl Responder {
     NamedFile::open_async("../frontend/resources/inter/static/Inter-Medium.ttf").await.unwrap()
 }
 
@@ -39,7 +43,10 @@ async fn main() -> std::io::Result<()> {
             // CSS 
             .service(web::resource("/styles.css").to(styles))
             // resources
-            .service(web::resource("/Inter-Medium.ttf").to(resources))
+            .service(web::resource("/Inter-Medium.ttf").to(intermedium))
+            .service(web::resource("/Inter-"))
+            // js
+            .service(web::resource("/main.js").to(js))
             // websocket route
             .service(web::resource("/ws").route(web::get().to(echo_ws)))
             // enable logger
