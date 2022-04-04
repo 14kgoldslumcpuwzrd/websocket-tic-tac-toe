@@ -68,10 +68,12 @@ h2 {
 #gameboard > .row > div {
     width: 33%;
     height: 100%;
+    font-size: 50px;
+    text-align: center;
 }
 
 #gameboard > .row > div:hover {
-    background: blue;
+    cursor: pointer;
 }
 
 .border-down { border-bottom: 1px solid black; } 
