@@ -12,6 +12,8 @@ const winning_options = [
 const playerOneMarks = [];
 const playerTwoMarks = [];
 
+//const socket = new WebSocket('http://127.0.0.1:8080/')
+
 
 
 
