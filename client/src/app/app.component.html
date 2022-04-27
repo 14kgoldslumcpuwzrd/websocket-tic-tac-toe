@@ -1,1 +1,5 @@
 <app-header></app-header>
+<section>
+  <app-queue *ngIf="isQueueing"></app-queue>
+  <app-game *ngIf="!isQueueing"></app-game>
+</section>

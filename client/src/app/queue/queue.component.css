@@ -1,0 +1,10 @@
+.static-centered-text {
+    margin-left: 50%;
+    margin-top: 35vh;
+    position: static;
+    transform: translateX(-35px);
+}
+
+.centered {
+    text-align: center; 
+}
