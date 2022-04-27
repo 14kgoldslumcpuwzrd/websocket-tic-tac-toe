@@ -1,2 +1,0 @@
-cargo:rustc-env=TYPENUM_BUILD_CONSTS=/Users/ashaun/Projects/websocket-tic-tac-toe/backend/target/debug/build/typenum-eb32acb8397954c0/out/consts.rs
-cargo:rustc-env=TYPENUM_BUILD_OP=/Users/ashaun/Projects/websocket-tic-tac-toe/backend/target/debug/build/typenum-eb32acb8397954c0/out/op.rs
