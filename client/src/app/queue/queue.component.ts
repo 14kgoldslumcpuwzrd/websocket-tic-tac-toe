@@ -1,4 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { WebSocketRequestService } from '../web-socket-request.service';
 
 @Component({
   selector: 'app-queue',
@@ -13,7 +14,11 @@ export class QueueComponent implements OnInit {
   numPlayers = 1;
   interval: any = null;
 
-  constructor() { }
+  constructor(private ws: WebSocketRequestService) { 
+    this.ws = new WebSocketRequestService();
+    console.log(this.ws.connect("127.0.0.1:9001"));
+    
+  }
 
   ngOnInit(): void {
     this.interval = setInterval( () => {
