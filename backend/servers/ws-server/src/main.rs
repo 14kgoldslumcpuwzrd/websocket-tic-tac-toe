@@ -36,11 +36,18 @@ impl Actor for WSServer {
 impl StreamHandler<Result<ws::Message, ws::ProtocolError>> for WSServer {
     fn handle(&mut self, msg: Result<ws::Message, ws::ProtocolError>, ctx: &mut Self::Context) {
         match msg {
-            Ok(ws::Message::Ping(msg)) => ctx.pong(&msg),
-            Ok(ws::Message::Text(text)) => ctx.text(text),
+            Ok(ws::Message::Ping(msg)) => {
+                ctx.pong(&msg);
+                println!("PONGING DUDE!!!");
+            },   
+            Ok(ws::Message::Text(text)) => {
+                println!("TEXT WAS RECEIVED: {}", &text);
+                ctx.text(text);
+            },
             Ok(ws::Message::Binary(bin)) => ctx.binary(bin),
             _ => (),
         }
+        println!()
     }
 }
 
