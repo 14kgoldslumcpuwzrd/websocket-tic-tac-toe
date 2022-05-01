@@ -1,0 +1,2 @@
+cargo:rustc-env=TYPENUM_BUILD_CONSTS=C:\Users\ashau\projects\websocket-tic-tac-toe\backend\servers\ws-server\target\debug\build\typenum-d888e37062fff8f5\out\consts.rs
+cargo:rustc-env=TYPENUM_BUILD_OP=C:\Users\ashau\projects\websocket-tic-tac-toe\backend\servers\ws-server\target\debug\build\typenum-d888e37062fff8f5\out\op.rs

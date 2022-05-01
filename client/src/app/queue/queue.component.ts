@@ -1,5 +1,10 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { WebSocketRequestService } from '../web-socket-request.service';
+import { GameService } from '../game.service';
+
+export interface Message {
+  author: string,
+  message: string
+}
 
 @Component({
   selector: 'app-queue',
@@ -13,11 +18,10 @@ export class QueueComponent implements OnInit {
   ellipses = this.OPTIONS[this.selectedOption];
   numPlayers = 1;
   interval: any = null;
+  //public messages: Subject<Message>;
 
-  constructor(private ws: WebSocketRequestService) { 
-    this.ws = new WebSocketRequestService();
-    console.log(this.ws.connect("127.0.0.1:9001"));
-    
+  constructor(private gameService: GameService) { 
+    this.gameService = new GameService();
   }
 
   ngOnInit(): void {

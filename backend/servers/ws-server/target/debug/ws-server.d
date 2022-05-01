@@ -1,1 +1,1 @@
-/Users/ashaun/Projects/websocket-tic-tac-toe/backend/servers/ws-server/target/debug/ws-server: /Users/ashaun/Projects/websocket-tic-tac-toe/backend/servers/ws-server/src/main.rs
+C:\Users\ashau\projects\websocket-tic-tac-toe\backend\servers\ws-server\target\debug\ws-server.exe: C:\Users\ashau\projects\websocket-tic-tac-toe\backend\servers\ws-server\src\main.rs
